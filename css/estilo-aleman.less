@@ -1,0 +1,185 @@
+@import "mixins-master.less";
+@amarillo: #ffce00;
+@rojo: #f00;
+
+//Mixins
+.grid70,.grid60,.grid40,.grid30{
+    padding-top: 46px;
+}
+
+main{
+    background-image: url(../img/Berlin_reichstag_CP.jpg);
+    .bg-cover;
+    background-position: left top;
+    background-attachment:fixed;
+}
+.cd-main-content{
+    min-height: 100%;
+    
+        
+    .grid30{
+        background-color: @blanco;
+        
+        &>p{
+            width: 80%;
+            padding: 66px 0;
+            .centrar
+        }
+        figure{
+            width: 80%;
+            .centrar;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+    
+    h2{
+        margin-left: 60px;
+        .font-size(48);
+        color: @blanco;
+    }
+    
+    /*&>.grid50{
+        background-color: #e6e6e6;
+    }*/
+}
+
+footer{
+    background-color: @negro;
+    color: @blanco;
+    height: 60px;
+    .w-100;
+    padding: 0 20px;
+    
+    p{
+        line-height: 60px;
+        float: left;
+    }
+    
+    a{
+      float: left;  
+    }
+}
+
+.titulo-categoria{
+    height: 103px;
+    background-color: #43575d;
+    text-align: center;
+    
+    h2{
+        line-height: 103px;
+        text-transform: uppercase;
+    }
+}
+
+#entradas{
+    background-color: #e6e6e6;
+    padding: 22px 36px;
+    
+    h3{
+        a{
+          .font-size(42);
+            color: @negro;
+            &:hover{
+                color: @rojo;
+            }
+        }
+    }
+    figure{
+        margin: 18px 0;
+        height: 215px;
+        overflow: hidden;
+        max-width: 600px;
+        img{
+            .w-100;
+        }
+    }
+    article{
+        border-bottom: 1px #666 solid;
+        &>a{
+            color: @rojo;
+            display: table;
+            padding: 10px;
+            margin: 10px 0;
+            
+            &:hover{
+                color: @negro;
+                background-color: @amarillo;
+            }
+        }
+    }
+}
+figure{
+    height: 290px;
+    overflow: hidden;
+    
+    img{.w-100;}
+}
+.titulo-categoria+.centro-caja{
+    background-color: #e6e6e6;
+    padding: 0 10%;
+}
+figure+.centro-caja{
+    background-color: #e6e6e6;
+    padding: 0 10%;
+    
+    h3{
+        .font-size(45);
+        padding: 50px 0;
+    }
+    cite{
+        .font-size(20);
+        color: #444;
+    }
+    p{
+        margin: 25px auto;
+    }
+    span{
+        display: table;
+       float: right;
+        margin: 20px 0;
+        padding: 15px 10px;
+        border: 1px #666 solid;
+        cursor: pointer;
+        color: @negro;
+        
+        i{.font-size(20);}
+        
+        &:hover{
+            color: @rojo;
+            border: 1px @rojo solid;
+        }
+    }
+    h5{
+        .font-size(22);
+        margin: 15px 0;
+    }
+    textarea{
+        height: 118px;
+        .w-100;
+        padding: 15px;
+        font-family: "Titillium Web", sans-serif;
+    }
+    button{
+        background-color: #555;
+        border: none;
+        cursor: pointer;
+        .font-size(22);
+        color: @blanco;
+        margin: 22px 0 50px 0;
+        padding: 10px 20px;
+        
+        &:hover{text-decoration: underline;}
+        &:active{
+            background-color: @amarillo;
+            text-decoration: none;
+        }
+    }
+    h4{
+        .font-size(30);
+        color: @negro;
+        margin-bottom: 20px;
+    }
+}
